@@ -96,7 +96,83 @@ Navigation
 
 .nav_logo a{
     font-size: 2.5rem;
+    color: var(--black);
+    padding: 1.6rem;
+    font-weight: 700;   
 }
+
+.nav_hamburger{
+   display: none; 
+    cursor: pointer;
+}
+
+.nav_hamburger svg{
+    height: 2.3rem;
+    width:23rem;
+}
+
+.menu_top{
+    display: none;
+}
+
+.nav_menu{
+    width: 50%;
+}
+
+.nav_list{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.nav_item:not(:last-child){
+    margin-right: 1.6rem;
+}
+
+.nav_list .nav_link:link,
+.nav_list .nav_link:visited{
+    display: inline-block;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--black);
+    transition: .3s ease-in-out;
+}
+
+.nav_list .nav_link:hover{
+    color: var(--orange);
+}
+
+.nav_icons {
+    display: flex;
+    position: relative;
+}
+
+.nav_icons .icon_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .7rem;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.nav_icons .icon_item svg{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.nav_icons .icon_item:link,
+.nav_icons .icon_item:visited{
+    color: var(--black);
+}
+
+.nav_icons .icon_item:hover{
+    background-color: var(--orange);
+    border: 1px solid var(--black);
+}
+
 /*
 =====================
 Navigation Media
