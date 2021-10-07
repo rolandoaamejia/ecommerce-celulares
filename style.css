@@ -173,8 +173,103 @@ Navigation
     border: 1px solid var(--black);
 }
 
+.nav_icons .icon_item:not(:last-child){
+    margin-right: 1rem;
+}
+
+.nav_icons #cart_total{
+    font-size: 1rem;
+    position: absolute;
+    top: 2px;
+    right: -6px;
+    background-color: var(--orange);
+    padding: .2rem .4rem;
+    border-radius: 100%;
+    color: var(--primaryColor);
+}
+
 /*
 =====================
 Navigation Media
 =====================
 */
+
+@media only screen and (max-width: 768px){
+    .nav_menu{
+        position: fixed;
+        top: 0;
+        left: -30rem;
+        width: 0;
+        background-color: var(--white);
+        z-index: 9990;
+        height: 100%;
+        transition: all .3s;
+    }
+
+    .nav_menu.open{
+        left: 0rem;
+        width: 30rem;
+    }
+
+    .nav_logo{
+        width: 50%;
+    }
+
+    .nav_hamburger{
+        display: block;
+    }
+
+    .menu_top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--orange);
+        padding: 1.8rem 1rem;
+    }
+
+    .menu_top svg{
+        height: 1.6rem;
+        width: 1.6rem;
+        fill: var(--primaryColor);
+    }
+
+    .nav_category{
+        color: var(--white);
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+
+    .nav_list{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.6rem 1rem;
+    }
+
+    .nav_item:not(:last-child){
+        margin-right: 0;
+    }
+
+    .nav_item{
+        width: 100%;
+    }
+
+    .nav_list .nav_link:link,
+    .nav_list .nav_link:visited{
+        padding: 1.6rem 0;
+        width: 100%;
+        color: var(--grey2);
+    }
+
+    body.active::before{
+        content:"";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--black) none no-repeat 0 0;
+        opacity: .7;
+        z-index: 999;
+        transition: .8s;
+    }
+}
