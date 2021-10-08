@@ -203,11 +203,11 @@ Navigation Media
         background-color: var(--white);
         z-index: 9990;
         height: 100%;
-        transition: all .3s;
+        transition: all 0.5s;
     }
 
     .nav_menu.open{
-        left: 0rem;
+        left: 30rem;
         width: 30rem;
     }
 
@@ -241,11 +241,11 @@ Navigation Media
 
     .nav_list{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: start;
         padding: 1.6rem 1rem;
     }
 
-    .nav_item:not(:last-child){
+    .nav_item:not(:last-child) {
         margin-right: 0;
     }
 
@@ -254,7 +254,7 @@ Navigation Media
     }
 
     .nav_list .nav_link:link,
-    .nav_list .nav_link:visited{
+    .nav_list .nav_link:visited {
         padding: 1.6rem 0;
         width: 100%;
         color: var(--grey2);
@@ -271,5 +271,16 @@ Navigation Media
         opacity: .7;
         z-index: 999;
         transition: .8s;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .nav_icons .icon_item svg{
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .nav_icons .icon_item {
+        padding: 0.4rem;
     }
 }
